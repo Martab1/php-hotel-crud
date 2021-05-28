@@ -21,8 +21,8 @@
                          number room: <?php echo $room['room_number'] ?>
                          <a href="./details-room.php?id=<?php echo $room['id'] ?>">view the details of this room</a> 
                      </li>
-                <?php  } ?>          
-            <?php } ?> 
+                <?php  } ?>           
+            <?php } else echo 'no rooms found' ?> 
             
         </ul>
     </section>
