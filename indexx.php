@@ -31,10 +31,11 @@
                             <td> <?php echo $room['id'] ?></td>
                             <td> <?php echo $room['room_number'] ?> </td>
                             <td> <a class="text-decoration-none" style="color: #53a7d0;" href="./details-room.php?id=<?php echo $room['id'] ?>">view more details </a> </td>
-                        <?php  } ?>           
-                    <?php } else echo 'no rooms found' ?> 
+                        <?php  } ?>
+                        </tr>             
+                <?php } else echo 'no rooms found' ?> 
                         
-                        </tr>  
+                       
             </tbody>
        </table>
  
