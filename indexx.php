@@ -9,22 +9,36 @@
   require_once __DIR__ . '/templates/head.php';
 ?>
 
-<body>
+<body class="">
 
-    <section>
-         <h1> ROOMS</h1>
-        <ul>
-            <?php // loop records DB
-            if(!empty($rooms)){
-                foreach($rooms as $room){ ?>
-                    <li> id room: <?php echo $room['id'] ?>  
-                         number room: <?php echo $room['room_number'] ?>
-                         <a href="./details-room.php?id=<?php echo $room['id'] ?>">view the details of this room</a> 
-                     </li>
-                <?php  } ?>           
-            <?php } else echo 'no rooms found' ?> 
-            
-        </ul>
+    <section class="text-uppercase">
+         <h1 class="fw-light my-5 mx-5"> HOTEL ROOMS</h1>
+    
+
+        <table class="table table-hover container my-6 shadow-sm p-3 mb-5 rounded text-secondary">
+        <thead>
+          <tr>
+            <th> id</th>
+            <th> number</th>
+            <th> details</th>
+          </tr>
+        </thead>
+            <tbody>
+                <?php // loop records DB
+                if(!empty($rooms)){
+                    foreach($rooms as $room){ ?> 
+                        <tr>
+                            <td> <?php echo $room['id'] ?></td>
+                            <td> <?php echo $room['room_number'] ?> </td>
+                            <td> <a class="text-decoration-none" style="color: #53a7d0;" href="./details-room.php?id=<?php echo $room['id'] ?>">view more details </a> </td>
+                        <?php  } ?>           
+                    <?php } else echo 'no rooms found' ?> 
+                        
+                        </tr>  
+            </tbody>
+       </table>
+ 
+     
     </section>
 
 
